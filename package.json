@@ -20,10 +20,16 @@
     "test:e2e": "jest --config ./test/jest-e2e.json"
   },
   "dependencies": {
+    "@nestjs-modules/mailer": "^2.0.2",
     "@nestjs/common": "^10.0.0",
     "@nestjs/config": "^4.0.2",
     "@nestjs/core": "^10.0.0",
+    "@nestjs/mapped-types": "*",
     "@nestjs/platform-express": "^10.0.0",
+    "@nestlab/google-recaptcha": "^3.10.0",
+    "@prisma/client": "^6.19.0",
+    "argon2": "^0.44.0",
+    "class-validator": "^0.14.2",
     "connect-redis": "^9.0.0",
     "cookie-parser": "^1.4.7",
     "express-session": "^1.18.2",
