@@ -17,20 +17,20 @@ export function ResetPasswordTemplate({ domain, token }: ResetPasswordTemplatePr
     const resetLink = `${domain}/auth/new-password?token=${token}`;
 
     return (
-        <Tailwind>
+        <Tailwind children={        <Html>
+            <Body className='text-black'>
+                <Heading>Сброс пароля</Heading>
+                <Text>
+                    Привет! Вы запросили сброс пароля. Пожалуйста, перейдите по следующей ссылке, чтобы создать новый пароль:
+                </Text>
+                <Link href={resetLink}>Подтвердить сброс пароля</Link>
+                <Text>
+                    Эта ссылка действительна в течение 1 часа. Если вы не запрашивали сброс пароля, просто проигнорируйте это сообщение.
+                </Text>
+            </Body>
+        </Html>}>
 
-            <Html>
-                <Body className='text-black'>
-            <Heading>Сброс пароля</Heading>
-    <Text>
-    Привет! Вы запросили сброс пароля. Пожалуйста, перейдите по следующей ссылке, чтобы создать новый пароль:
-        </Text>
-        <Link href={resetLink}>Подтвердить сброс пароля</Link>
-    <Text>
-    Эта ссылка действительна в течение 1 часа. Если вы не запрашивали сброс пароля, просто проигнорируйте это сообщение.
-    </Text>
-    </Body>
-    </Html>
+
     </Tailwind>
 );
 }
