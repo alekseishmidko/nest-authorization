@@ -21,6 +21,7 @@
     "db:push": "npx prisma db push",
     "db:reset:push": "prisma db push --force-reset",
     "db:reset:migrate": "prisma migrate reset --force --skip-seed",
+    "db:generate": "npx prisma generate",
     "studio": "npx prisma studio"
   },
   "dependencies": {

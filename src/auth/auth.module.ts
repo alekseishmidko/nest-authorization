@@ -9,7 +9,7 @@ import { UserService } from '@/user/user.service'
 
 import { AuthController } from './auth.controller'
 import { AuthService } from './auth.service'
-import { EmailConfirmationModule } from './email-confirmation/email-confirmation.module'
+
 import { ProviderModule } from './provider/provider.module'
 import { TwoFactorAuthService } from './two-factor-auth/two-factor-auth.service'
 import { EmailConfirmationModule } from './email-confirmation/email-confirmation.module';
