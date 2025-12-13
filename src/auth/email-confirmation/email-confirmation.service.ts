@@ -7,7 +7,7 @@ import {
 } from '@nestjs/common'
 import { TokenType } from '@prisma/__generated__'
 import { Request } from 'express'
-import { v4 as uuidv4 } from 'uuid'
+
 
 import { MailService } from '@/libs/mail/mail.service'
 import { PrismaService } from '@/prisma/prisma.service'
@@ -90,6 +90,7 @@ export class EmailConfirmationService {
     }
 
     private async generateVerificationToken(email: string) {
+        const { v4: uuidv4 } = await import('uuid')
         const token = uuidv4()
         const expiresIn = new Date(new Date().getTime() + 3600 * 1000)
 

@@ -17,11 +17,11 @@ services:
       - backend
 
   redis:
-    container_name: redis
+    container_name: redis-2
     image: redis:5.0
     restart: always
     ports:
-      - 8379:6379
+      - 8579:6479
     command: redis-server --requirepass ${REDIS_PASSWORD}
     volumes:
       - redis_data:/data
